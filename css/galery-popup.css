@@ -1,0 +1,22 @@
+.galery-popup__container {
+  position: relative;
+}
+
+.galery-popup__close {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+
+.galery-popup__close::before, .galery-popup__close::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.galery-popup__close::before {
+  height: 1px;
+}
