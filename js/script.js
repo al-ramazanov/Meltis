@@ -74,7 +74,7 @@ function documentClick(e) {
         else {
             console.log('no have menu');
         }
-
+e.preventDefault()
     }
     if (targetEl.closest('[data-catalog]')) {
         const catalogBtn = targetEl.dataset ? targetEl.dataset : null
@@ -99,7 +99,7 @@ function documentClick(e) {
             })
         }
     }
-    e.preventDefault()
+    
 }
 document.addEventListener('click', documentClick)
 
