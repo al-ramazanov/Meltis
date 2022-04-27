@@ -24,6 +24,7 @@ body.lock {
 
 a {
   color: inherit;
+  cursor: pointer;
 }
 
 button {

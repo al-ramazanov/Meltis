@@ -99,7 +99,7 @@ function documentClick(e) {
             })
         }
     }
-    e.preventDefault()
+    // e.preventDefault()
 }
 document.addEventListener('click', documentClick)
 
