@@ -2461,6 +2461,9 @@ a {
   cursor: pointer;
   padding: 18px 55px 21px 18px;
 }
+.product-info__dropdown-content >* {
+    margin-bottom: 20px;
+}
 
 @media (max-width: 1550px) {
   .product-info__dropdown-btn {
@@ -2570,8 +2573,12 @@ a {
   will-change: max-width;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
-
+.dropdown-js__body.nogrid {
+  display: block;
+}
 .dropdown-js__body.open {
   padding: 10px 0 30px 18px;
   -webkit-box-sizing: content-box;

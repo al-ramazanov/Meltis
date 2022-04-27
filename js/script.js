@@ -7,17 +7,19 @@ function headerActions() {
     let headerinput = document.querySelector('.header__input');
     let headerLabel = document.querySelector('.header__label');
     let inputClose = document.querySelector('.header__input-close')
-    let headerForm = document.querySelector('.header__search')
-    headerinput.addEventListener('click', (e) => {
+    let headerForm = document.querySelector('.header__search');
+
+    headerLabel.addEventListener('click', (el) => {
         headerAction.classList.add('active')
         headerinput.classList.add('active')
+        headerinput.focus()
         headerMenu.classList.add('hide')
         headerLabel.classList.add('active')
         headerForm.classList.add('active')
         body.classList.add('lock')
     })
 
-    inputClose.addEventListener('click', (e) => {
+    inputClose.addEventListener('click', () => {
         headerAction.classList.remove('active')
         headerinput.classList.remove('active')
         headerMenu.classList.remove('hide')
@@ -39,10 +41,10 @@ function headerActions() {
     if (document.documentElement.offsetWidth <= 920.99) {
         headerContainer.prepend(headerForm)
     }
+    console.log(1);
 }
 headerActions()
 
-document.addEventListener('click', documentClick)
 
 function documentClick(e) {
     const targetEl = e.target;
@@ -72,6 +74,7 @@ function documentClick(e) {
         else {
             console.log('no have menu');
         }
+
     }
     if (targetEl.closest('[data-catalog]')) {
         const catalogBtn = targetEl.dataset ? targetEl.dataset : null
@@ -96,9 +99,10 @@ function documentClick(e) {
             })
         }
     }
-    // e.preventDefault()
-
+    e.preventDefault()
 }
+document.addEventListener('click', documentClick)
+
 function addClass() {
     let subMenuBtn = document.querySelectorAll('[data-parent]');
     if (subMenuBtn && subMenuBtn) {
