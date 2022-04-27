@@ -534,7 +534,18 @@ a {
   color: #040406;
   display: inline-block;
 }
-
+.header__link::after {
+  content: '';
+  width: 100%;
+  display: block;
+  height: 1.5px;
+  background-color: #040406;
+  transition:0.3s ease;
+  opacity: 0;
+}
+.header__link:hover.header__link::after{
+  opacity: 1;
+}
 @media (max-width: 1550px) {
   .header__link {
     font-size: calc(12px + 2 * ((100vw - 320px) /1230));
