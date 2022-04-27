@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?pdjf3z');
-  src:  url('../fonts/icomoon.eot?pdjf3z#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?pdjf3z') format('truetype'),
-    url('../fonts/icomoon.woff?pdjf3z') format('woff'),
-    url('../fonts/icomoon.svg?pdjf3z#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?jkmv4r');
+  src:  url('../fonts/icomoon.eot?jkmv4r#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jkmv4r') format('truetype'),
+    url('../fonts/icomoon.woff?jkmv4r') format('woff'),
+    url('../fonts/icomoon.svg?jkmv4r#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,12 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow:before {
+.icon-arrowRight:before {
   content: "\e900";
-  color: #9d9d9d;
 }
-.icon-filter:before {
+.icon-arrowLeft:before {
   content: "\e901";
+}
+.icon-rotate360:before {
+  content: "\e90a";
+}
+.icon-zoom:before {
+  content: "\e90b";
 }
 .icon-vk:before {
   content: "\e902";
