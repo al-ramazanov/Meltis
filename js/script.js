@@ -100,7 +100,6 @@ e.preventDefault()
         }
     }
 <<<<<<< HEAD
-    // e.preventDefault()
 =======
     
 >>>>>>> 5c3d0ac7909fb87ee99ceb3d641f7693697585aa
