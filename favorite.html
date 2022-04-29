@@ -26,10 +26,10 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li class="header__list-item">
-<a class="header__link" data-catalog>Каталог</a>
+                            <a href="catalog.html" class="header__link">Каталог</a>
                         </li>
                         <li class="header__list-item">
-                             <a href="new.html" class="header__link">Новинки</a>
+                            <a href="new.html" class="header__link">Новинки</a>
                         </li>
                         <li class="header__list-item">
                             <a href="promotions.html" class="header__link">Акции</a>
@@ -38,13 +38,16 @@
                             <a href="catalog.html" class="header__link">Инсталляции</a>
                         </li>
                         <li class="header__list-item">
+                            <a href="about.html" class="header__link">Компания</a>
+                        </li>
+                        <li class="header__list-item">
                             <a href="#" class="header__link">Поддержка</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__actions">
                     <form class="header__search">
-                        <label for="header-search" class="header__label icon-search">
+                        <label for="header-search" class="header__label icon-search header-icon">
                             <input type="search" class="header__input" id="header-search">
                         </label>
                         <div class="header__input-close"></div>
@@ -87,38 +90,6 @@
                         </a>
                         <p class="catalog-header-back">Назад</p>
                     </div>
-                    <div class="catalog-header__categories">
-                        <ul class="categories-header__list">
-                            <li class="categories-header__list-item"><a href="#" data-parent="1">Потолочные</a></li>
-                            <li class="categories-header__list-item"><a href="#" data-parent="2">Настенные</a></li>
-                            <li class="categories-header__list-item"><a href="#">Торшеры</a></li>
-                            <li class="categories-header__list-item"><a href="catalog.html">Инсталляции</a></li>
-                            <li class="categories-header__list-item"><a href="#">Детский свет</a></li>
-                            <li class="categories-header__list-item"><a href="#">Настольные лампы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Конструктор освещения</a></li>
-                            <li class="categories-header__list-item"><a href="#">Световые системы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Аксессуары</a></li>
-                            <li class="categories-header__list-item"><a href="#">Патроны</a></li>
-                            <li class="categories-header__list-item"><a href="#">Новинки</a></li>
-                            <li class="categories-header__list-item"><a href="#">Акции</a></li>
-                        </ul>
-                        <div class="categories-header__submenu" data-submenu="1">
-                            <div class="categories-header__submenu-close"></div>
-                            <a href="#" class="categories-header__link">Люстры</a>
-                            <a href="#" class="categories-header__link">Светильники</a>
-                            <a href="#" class="categories-header__link">Кольцевые люстры и светильники</a>
-                            <a href="#" class="categories-header__link">Реечные и рядные светильники
-                                и люстры</a>
-                            <a href="#" class="categories-header__link">Точечный свет</a>
-                        </div>
-                        <div class="categories-header__submenu" data-submenu="2">
-                            <div class="categories-header__submenu-close"></div>
-                            Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Ullam a odio
-                            similique, porro provident blanditiis sed nihil praesentium doloremque eum maiores quas,
-                            tenetur asperiores enim voluptatibus et! Nemo, atque. Ratione!
-                        </div>
-                    </div>
                 </div>
             </div>
         </header>
@@ -126,391 +97,282 @@
             <div class="favorite">
                 <div class="favorite__container">
                     <div class="block__header">
-                        Избранное <div class="block__breadcrumb">
+                        Избранное
+                        <div class="block__breadcrumb">
                             <a href="mainpage.html" class="breadcrumb__item">Главная</a>
                             <span class="breadcrumb__separator breadcrumb__item">/</span>
                             <a href="favorite.html" class="breadcrumb__item">избранное</a>
                         </div>
                     </div>
-                    <div class="favorite__cards">
+                    <div class="favorite__content">
+                        <svg display="none">
+                            <defs>
+                                <g id="img-favorite-white">
+                                    <path xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z" />
+                                </g>
+                            </defs>
+                        </svg>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
+                            </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                         <div class="card">
+                            <div class="card-badge-sale">Sale</div>
+                            <div class="card-badge-new">new</div>
                             <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
                             </div>
                             <div class="card__text">
                                 <h3 class="card__name">
-                                    Semi sandblasted Crysta
+                                    Semi
                                 </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
+                                <div class="card__price card__price-sale">
+                                    <span class="card__price-old">88 000 ₽</span>
+                                    <p class="card__price-new">61 600 ₽
+                                        <span class="card__price-percent">-30%</span>
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price card__price--favorite">
-                                    88 000 ₽
-                                    <div class="favorite-card__price-icon">
-                                        <svg width="0" height="0" class="hidden">
-                                            <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22"
-                                                id="favorite-white">
-                                                <path
-                                                    d="M13.4978 20.2951L22.4015 11.3922C24.5889 9.19391 24.9077 5.59976 22.8412 3.30258C22.3229 2.72368 21.692 2.25652 20.9871 1.92964C20.2822 1.60276 19.518 1.42303 18.7413 1.40143C17.9646 1.37982 17.1916 1.5168 16.4696 1.804C15.7476 2.09119 15.0917 2.52256 14.5421 3.07176L12.8713 4.75343L11.4313 3.30258C9.23284 1.11531 5.63839 0.796563 3.34102 2.86293C2.76207 3.38115 2.29487 4.01197 1.96797 4.71683C1.64106 5.42169 1.46131 6.1858 1.43971 6.96247C1.41811 7.73914 1.5551 8.51206 1.84231 9.234C2.12953 9.95595 2.56094 10.6118 3.11018 11.1614L12.2447 20.2951C12.4114 20.4602 12.6366 20.5529 12.8713 20.5529C13.1059 20.5529 13.3311 20.4602 13.4978 20.2951Z"
-                                                    stroke="white" stroke-linecap="round" stroke-linejoin="round">
-                                                </path>
-                                            </symbol>
-                                        </svg>
-                                        <svg class="icon-favorite-white">
-                                            <use xlink:href="#favorite-white"></use>
-                                        </svg>
-                                    </div>
-                                </div>
+                            <div class="card__favorite">
+                                <span>
+                                    <svg viewBox="0 0 25 22" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        preserveAspectRatio="xMinYMin" class="white-icon">
+                                        <use xlink:href="#img-favorite-white"></use>
+                                    </svg>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -533,145 +395,115 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

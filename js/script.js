@@ -41,66 +41,64 @@ function headerActions() {
     if (document.documentElement.offsetWidth <= 920.99) {
         headerContainer.prepend(headerForm)
     }
-    console.log(1);
 }
 headerActions()
 
 
-function documentClick(e) {
-    const targetEl = e.target;
-    if (targetEl.closest('[data-parent]')) {
-        const subMenuId = targetEl.dataset.parent ? targetEl.dataset.parent : null;
-        const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
-        if (subMenu) {
-            let activeLink = document.querySelector('.submenu-active');
-            let activeBlock = document.querySelector('.submenu-open');
-            let closeBtn = document.querySelectorAll('.categories-header__submenu-close')
-            if (activeLink && activeLink !== targetEl) {
-                activeLink.classList.remove('submenu-active')
-                activeBlock.classList.remove('submenu-open')
-            }
+// function documentClick(e) {
+//     const targetEl = e.target;
+//     if (targetEl.closest('[data-parent]')) {
+//         const subMenuId = targetEl.dataset.parent ? targetEl.dataset.parent : null;
+//         const subMenu = document.querySelector(`[data-submenu="${subMenuId}"]`);
+//         if (subMenu) {
+//             let activeLink = document.querySelector('.submenu-active');
+//             let activeBlock = document.querySelector('.submenu-open');
+//             let closeBtn = document.querySelectorAll('.categories-header__submenu-close')
+//             if (activeLink && activeLink !== targetEl) {
+//                 activeLink.classList.remove('submenu-active')
+//                 activeBlock.classList.remove('submenu-open')
+//             }
 
-            subMenu.classList.toggle('submenu-open')
-            targetEl.classList.toggle('submenu-active');
-            closeBtn.forEach((el) => {
-                el.addEventListener('click', () => {
-                    if (subMenu.classList.contains('submenu-open')) {
-                        subMenu.classList.remove('submenu-open')
-                        targetEl.classList.remove('submenu-active');
-                    }
-                })
-            })
-        }
-        else {
-            console.log('no have menu');
-        }
-        e.preventDefault()
-    }
-    if (targetEl.closest('[data-catalog]')) {
-        const catalogBtn = targetEl.dataset ? targetEl.dataset : null
-        if (catalogBtn) {
-            let catalog = document.querySelector('.header__catalog');
-            targetEl.classList.toggle('open')
-            catalog.classList.toggle('open')
-            document.addEventListener('click', (e) => {
-                if (e.target == catalog) {
-                    targetEl.classList.remove
-                        ('open')
-                    catalog.classList.remove
-                        ('open')
-                }
-            })
-            let catalogBack = document.querySelector('.catalog-header-back');
-            catalogBack.addEventListener('click', () => {
-                targetEl.classList.remove
-                    ('open')
-                catalog.classList.remove
-                    ('open')
-            })
-        }
-    }
-}
-document.addEventListener('click', documentClick)
+//             subMenu.classList.toggle('submenu-open')
+//             targetEl.classList.toggle('submenu-active');
+//             closeBtn.forEach((el) => {
+//                 el.addEventListener('click', () => {
+//                     if (subMenu.classList.contains('submenu-open')) {
+//                         subMenu.classList.remove('submenu-open')
+//                         targetEl.classList.remove('submenu-active');
+//                     }
+//                 })
+//             })
+//         }
+//         else {
+//             console.log('no have menu');
+//         }
+//     }
+//     if (targetEl.closest('[data-catalog]')) {
+//         const catalogBtn = targetEl.dataset ? targetEl.dataset : null
+//         if (catalogBtn) {
+//             let catalog = document.querySelector('.header__catalog');
+//             targetEl.classList.toggle('open')
+//             catalog.classList.toggle('open')
+//             document.addEventListener('click', (e) => {
+//                 if (e.target == catalog) {
+//                     targetEl.classList.remove
+//                         ('open')
+//                     catalog.classList.remove
+//                         ('open')
+//                 }
+//             })
+//             let catalogBack = document.querySelector('.catalog-header-back');
+//             catalogBack.addEventListener('click', () => {
+//                 targetEl.classList.remove
+//                     ('open')
+//                 catalog.classList.remove
+//                     ('open')
+//             })
+//         }
+//     }
+// }
+// document.addEventListener('click', documentClick)
 
 function addClass() {
     let subMenuBtn = document.querySelectorAll('[data-parent]');
@@ -204,153 +202,67 @@ function openBlocks() {
                 </div>
             </div>
             <!-- ================================================================ -->
-            <div class="slider-block__header">
-                <h2 class="slider-block__title block__header">
-                    Some title
-                </h2>
-                <div class="slider-block__control">
-                    <div class="slider-block__btn slider-block__btn--prev cart-slider-prev"><span
-                            class="icon-arrow"></span>
-                    </div>
-                    <div class="slider-block__btn slider-block__btn--next cart-slider-next"><span
-                            class="icon-arrow"></span>
-                    </div>
+            <div class="slider-block">
+    <div class="slider-block__container">
+        <div class="slider-block__header">
+            <h2 class="slider-block__title block__header">
+            С этим часто покупают
+            </h2>
+            <div class="slider-block__control">
+                <div class="slider-block__btn slider-block__btn--prev cart-slider-prev"><span class="icon-arrowLeft"></span>
+                </div>
+                <div class="slider-block__btn slider-block__btn--next cart-slider-next"><span class="icon-arrowRight"></span>
                 </div>
             </div>
-            <div class="swiper page-slider-cart">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+        </div>
+        <div class="swiper page-slider-cart">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-badge-sale">Sale</div>
+                        <div class="card-badge-new">new</div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price">
-                                    88 000 ₽
-                                </div>
+                        <div class="card__text">
+                            <h3 class="card__name">
+                                Semi
+                            </h3>
+                            <div class="card__price card__price-sale">
+                                <span class="card__price-old">88 000 ₽</span>
+                                <p class="card__price-new">61 600 ₽
+                                    <span class="card__price-percent">-30%</span>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
+                </div>      
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card-badge-sale">Sale</div>
+                        <div class="card-badge-new">new</div>
+                                <div class="card__image-wrapper">
+                                    <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
+                                    <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
                                 </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price">
-                                    88 000 ₽
-                                </div>
+                        <div class="card__text">
+                            <h3 class="card__name">
+                                Semi
+                            </h3>
+                            <div class="card__price card__price-sale">
+                                <span class="card__price-old">88 000 ₽</span>
+                                <p class="card__price-new">61 600 ₽
+                                    <span class="card__price-percent">-30%</span>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price">
-                                    88 000 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price">
-                                    88 000 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <div class="swiper card-thumb-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic" class="card__image">
-                                    </div>
-                                </div>
-                                <div class="swiper-pagination card-thumb-pag"></div>
-                            </div>
-                            <div class="card__text">
-                                <h3 class="card__name">
-                                    Semi sandblasted Crysta
-                                </h3>
-                                <div class="card__price">
-                                    88 000 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>      
             </div>
+        </div>
+    </div>
+</div>
             <!-- ================================================================ -->
         </div>
     </div>`
@@ -358,14 +270,22 @@ function openBlocks() {
         const cart = wrapper.querySelector('.cart')
         const cartClose = cart.querySelector('.cart__close')
         cartSwitch.addEventListener('click', () => {
+            let productCardTop = document.querySelector('.product-card');
+            console.log(productCardTop);
             cart.classList.toggle('open')
+            // cart.style.top = productCardTop.offsetTop + 'px';
+            body.classList.toggle('lock')
         })
         document.addEventListener('click', (e) => {
             if (e.target == cart) {
                 cart.classList.remove('open')
+                body.classList.remove('lock')
+
             }
             if (e.target == cartClose) {
                 cart.classList.remove('open')
+                body.classList.remove('lock')
+
             }
         })
     }
@@ -696,10 +616,13 @@ function openBlocks() {
         document.addEventListener('click', (e) => {
             if (e.target == filter) {
                 filter.classList.remove('open')
+                filterClose.style.opacity = null
+
             }
             if (e.target == filterClose) {
                 filter.classList.remove('open')
                 filter.style.top = null
+                filterClose.style.opacity = null
 
             }
         })

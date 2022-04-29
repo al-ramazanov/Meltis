@@ -57,13 +57,15 @@ const page_slider_bestsellers = new Swiper('.page-slider-bestsellers', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
+    slidesPerView: 2,
+    spaceBetween: 10,
 
     breakpoints: {
         // when window width is >= 480px
-        420: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
+        // 420: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 8
+        // },
         // when window width is >= 640px
         500: {
             slidesPerView: 3,
@@ -95,13 +97,14 @@ const page_slider_buy = new Swiper('.page-slider-buy', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
-
+    slidesPerView: 2,
+    spaceBetween: 8,
     breakpoints: {
         // when window width is >= 480px
-        420: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
+        // 420: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 8
+        // },
         // when window width is >= 640px
         500: {
             slidesPerView: 3,
@@ -133,13 +136,14 @@ const page_slider_similar = new Swiper('.page-slider-similar', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
-
+    slidesPerView: 2,
+    spaceBetween: 8,
     breakpoints: {
         // when window width is >= 480px
-        420: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
+        // 420: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 8
+        // },
         // when window width is >= 640px
         500: {
             slidesPerView: 3,
@@ -171,13 +175,14 @@ const page_slider_recently = new Swiper('.page-slider-recently', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
-
+    slidesPerView: 2,
+    spaceBetween: 8,
     breakpoints: {
         // when window width is >= 480px
-        420: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
+        // 420: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 8
+        // },
         // when window width is >= 640px
         500: {
             slidesPerView: 3,
@@ -204,31 +209,34 @@ const page_slider_recently = new Swiper('.page-slider-recently', {
     },
 });
 
-const page_slider_cart = new Swiper('.page-slider-cart', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    allowTouchMove: false,
-    slidesPerView: 1,
 
-    breakpoints: {
+setTimeout(() => {
+    const page_slider_cart = new Swiper('.page-slider-cart', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        allowTouchMove: false,
+        slidesPerView: 2,
+        spaceBetween: 8,
 
-        550: {
-            slidesPerView: 2,
-        }
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.cart-slider-next',
-        prevEl: '.cart-slider-prev',
-    },
+        breakpoints: {
+            550: {
+                slidesPerView: 3,
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
+            },
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.cart-slider-next',
+            prevEl: '.cart-slider-prev',
+        },
 
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+}, 0);
 const page_slider_favorite = new Swiper('.page-slider-favorite', {
     // Optional parameters
     direction: 'horizontal',
@@ -271,13 +279,14 @@ const page_slider_recomended = new Swiper('.page-slider-recomended', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
-
+    slidesPerView: 2,
+    spaceBetween: 8,
     breakpoints: {
         // when window width is >= 480px
-        420: {
-            slidesPerView: 2,
-            spaceBetween: 8
-        },
+        // 420: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 8,
+        // },
         // when window width is >= 640px
         500: {
             slidesPerView: 3,
@@ -371,6 +380,44 @@ const page_slider_comprasion = new Swiper('.page-slider-comprasion', {
     navigation: {
         nextEl: '.comprasion-slider-next',
         prevEl: '.comprasion-slider-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+const page_slider_new = new Swiper('.page-slider-new', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    allowTouchMove: false,
+    slidesPerView: 1,
+
+    // breakpoints: {
+    //     // when window width is >= 480px
+    //     420: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 8
+    //     },
+    //     // when window width is >= 640px
+    //     500: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 8,
+    //     },
+    //     850: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 15,
+    //     },
+    //     1024: {
+    //         slidesPerView: 5,
+    //         spaceBetween: 20,
+    //     },
+    // },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.new-slider-next',
+        prevEl: '.new-slider-prev',
     },
 
     // And if we need scrollbar
