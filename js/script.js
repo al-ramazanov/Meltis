@@ -16,7 +16,7 @@ function headerActions() {
         headerMenu.classList.add('hide')
         headerLabel.classList.add('active')
         headerForm.classList.add('active')
-        body.classList.add('lock')
+        // body.classList.add('lock')
     })
 
     inputClose.addEventListener('click', () => {
@@ -194,7 +194,7 @@ function openBlocks() {
                 <div class="cart-order__quantity">
                     <span class="cart-order__quantity-value">1</span> товар на сумму
                 </div>
-                <a href="checkout.html" class="cart-order__btn">Оформить заказ</a>
+                <a href="checkout.html" class="cart-order__btn page-btn">Оформить заказ</a>
 
                 <div class="cart-order__info">
                     После оформления заказа менеджер свяжется с вами, чтобы уточнить
@@ -534,8 +534,8 @@ function openBlocks() {
                                 </label>
                             </li>
                             <li class="column-filter__list-item">
-                                <input type="checkbox"" class=" custom__checkbox-input" id="Сталь" name="Сталь">
-                                <label for="Сталь" class="custom__checkbox-label">
+                                <input type="checkbox"" class=" custom__checkbox-input" id="Сталь2" name="Сталь">
+                                <label for="Сталь2" class="custom__checkbox-label">
                                     <span class="custom__checkbox-switch"></span>Сталь
                                 </label>
                             </li>
@@ -698,5 +698,26 @@ document.addEventListener('click', (e) => {
             accordionBody.style.marginBottom = null;
         }
     }
-})
+    let counter;
+    if (target.classList.contains('minus-js') || target.classList.contains('plus-js')) {
+        const counterWrapper = target.closest('.counter-js')
+        counter = counterWrapper.querySelector('.value-js');
+    }
 
+    if (target.classList.contains('minus-js')) {
+        if (parseInt(counter.innerText) > 1) {
+            counter.innerText = --counter.innerText
+        }
+    }
+    if (target.classList.contains('plus-js')) {
+        counter.innerText = ++counter.innerText;
+
+    }
+    if (target.classList.contains('cart-card__remove')) {
+        const cartItem = target.closest('.cart-card')
+        let item = document.querySelector('.similar-min')
+        item.remove()
+        cartItem.remove()
+    }
+
+})
