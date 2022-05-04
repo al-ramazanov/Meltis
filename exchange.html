@@ -25,10 +25,10 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li class="header__list-item">
-<a class="header__link" data-catalog>Каталог</a>
+                            <a href="catalog.html" class="header__link">Каталог</a>
                         </li>
                         <li class="header__list-item">
-                             <a href="new.html" class="header__link">Новинки</a>
+                            <a href="new.html" class="header__link">Новинки</a>
                         </li>
                         <li class="header__list-item">
                             <a href="promotions.html" class="header__link">Акции</a>
@@ -37,13 +37,16 @@
                             <a href="catalog.html" class="header__link">Инсталляции</a>
                         </li>
                         <li class="header__list-item">
+                            <a href="about.html" class="header__link">Компания</a>
+                        </li>
+                        <li class="header__list-item">
                             <a href="#" class="header__link">Поддержка</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__actions">
                     <form class="header__search">
-                        <label for="header-search" class="header__label icon-search">
+                        <label for="header-search" class="header__label icon-search header-icon">
                             <input type="search" class="header__input" id="header-search">
                         </label>
                         <div class="header__input-close"></div>
@@ -71,8 +74,12 @@
                         </div>
                     </form>
                     <a href="comparison.html" class="header__compare icon-compare header-icon"></a>
-                    <a href="favorite.html" class="header__favorite icon-favorite header-icon"></a>
-                    <a href="checkout.html" class="header__cart icon-cart header-icon"></a>
+                    <a href="favorite.html" class="header__favorite icon-favorite header-icon">
+                        <span class="fovorite-value">0</span>
+                    </a>
+                    <a href="checkout.html" class="header__cart icon-cart header-icon">
+                        <span class="cart-value">0</span>
+                    </a>
                 </div>
                 <button class="burger">
                     <span class="burger__line"></span>
@@ -86,38 +93,6 @@
                         </a>
                         <p class="catalog-header-back">Назад</p>
                     </div>
-                    <div class="catalog-header__categories">
-                        <ul class="categories-header__list">
-                            <li class="categories-header__list-item"><a href="#" data-parent="1">Потолочные</a></li>
-                            <li class="categories-header__list-item"><a href="#" data-parent="2">Настенные</a></li>
-                            <li class="categories-header__list-item"><a href="#">Торшеры</a></li>
-                            <li class="categories-header__list-item"><a href="catalog.html">Инсталляции</a></li>
-                            <li class="categories-header__list-item"><a href="#">Детский свет</a></li>
-                            <li class="categories-header__list-item"><a href="#">Настольные лампы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Конструктор освещения</a></li>
-                            <li class="categories-header__list-item"><a href="#">Световые системы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Аксессуары</a></li>
-                            <li class="categories-header__list-item"><a href="#">Патроны</a></li>
-                            <li class="categories-header__list-item"><a href="#">Новинки</a></li>
-                            <li class="categories-header__list-item"><a href="#">Акции</a></li>
-                        </ul>
-                        <div class="categories-header__submenu" data-submenu="1">
-                            <div class="categories-header__submenu-close"></div>
-                            <a href="#" class="categories-header__link">Люстры</a>
-                            <a href="#" class="categories-header__link">Светильники</a>
-                            <a href="#" class="categories-header__link">Кольцевые люстры и светильники</a>
-                            <a href="#" class="categories-header__link">Реечные и рядные светильники
-                                и люстры</a>
-                            <a href="#" class="categories-header__link">Точечный свет</a>
-                        </div>
-                        <div class="categories-header__submenu" data-submenu="2">
-                            <div class="categories-header__submenu-close"></div>
-                            Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Ullam a odio
-                            similique, porro provident blanditiis sed nihil praesentium doloremque eum maiores quas,
-                            tenetur asperiores enim voluptatibus et! Nemo, atque. Ratione!
-                        </div>
-                    </div>
                 </div>
             </div>
         </header>
@@ -129,7 +104,7 @@
                         <div class="exchange__breadcrumb block__breadcrumb">
                             <a href="mainpage.html" class="breadcrumb__item">Главная</a>
                             <span class="breadcrumb__separator breadcrumb__item">/</span>
-                            <a href="about.html" class="breadcrumb__item">о компании</a>
+                            <a href="exchange.html" class="breadcrumb__item">о компании</a>
                         </div>
                     </div>
                     <div class="exchange__content text-content">

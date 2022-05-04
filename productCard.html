@@ -26,7 +26,7 @@
                 <nav class="header__menu">
                     <ul class="header__list">
                         <li class="header__list-item">
-<a class="header__link" data-catalog>Каталог</a>
+                            <a href="catalog.html" class="header__link">Каталог</a>
                         </li>
                         <li class="header__list-item">
                             <a href="new.html" class="header__link">Новинки</a>
@@ -35,8 +35,10 @@
                             <a href="promotions.html" class="header__link">Акции</a>
                         </li>
                         <li class="header__list-item">
-                            <a href="catalog.html
-                            " class="header__link">Инсталляции</a>
+                            <a href="catalog.html" class="header__link">Инсталляции</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="about.html" class="header__link">Компания</a>
                         </li>
                         <li class="header__list-item">
                             <a href="#" class="header__link">Поддержка</a>
@@ -45,7 +47,7 @@
                 </nav>
                 <div class="header__actions">
                     <form class="header__search">
-                        <label for="header-search" class="header__label icon-search">
+                        <label for="header-search" class="header__label icon-search header-icon">
                             <input type="search" class="header__input" id="header-search">
                         </label>
                         <div class="header__input-close"></div>
@@ -73,8 +75,12 @@
                         </div>
                     </form>
                     <a href="comparison.html" class="header__compare icon-compare header-icon"></a>
-                    <a href="favorite.html" class="header__favorite icon-favorite header-icon"></a>
-                    <a href="checkout.html" class="header__cart icon-cart header-icon"></a>
+                    <a href="favorite.html" class="header__favorite icon-favorite header-icon">
+                        <span class="fovorite-value"></span>
+                    </a>
+                    <a href="checkout.html" class="header__cart icon-cart header-icon">
+                        <span class="cart-value"></span>
+                    </a>
                 </div>
                 <button class="burger">
                     <span class="burger__line"></span>
@@ -87,38 +93,6 @@
                             <h3>Каталог</h3>
                         </a>
                         <p class="catalog-header-back">Назад</p>
-                    </div>
-                    <div class="catalog-header__categories">
-                        <ul class="categories-header__list">
-                            <li class="categories-header__list-item"><a href="#" data-parent="1">Потолочные</a></li>
-                            <li class="categories-header__list-item"><a href="#" data-parent="2">Настенные</a></li>
-                            <li class="categories-header__list-item"><a href="#">Торшеры</a></li>
-                            <li class="categories-header__list-item"><a href="catalog.html">Инсталляции</a></li>
-                            <li class="categories-header__list-item"><a href="#">Детский свет</a></li>
-                            <li class="categories-header__list-item"><a href="#">Настольные лампы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Конструктор освещения</a></li>
-                            <li class="categories-header__list-item"><a href="#">Световые системы</a></li>
-                            <li class="categories-header__list-item"><a href="#">Аксессуары</a></li>
-                            <li class="categories-header__list-item"><a href="#">Патроны</a></li>
-                            <li class="categories-header__list-item"><a href="#">Новинки</a></li>
-                            <li class="categories-header__list-item"><a href="#">Акции</a></li>
-                        </ul>
-                        <div class="categories-header__submenu" data-submenu="1">
-                            <div class="categories-header__submenu-close"></div>
-                            <a href="#" class="categories-header__link">Люстры</a>
-                            <a href="#" class="categories-header__link">Светильники</a>
-                            <a href="#" class="categories-header__link">Кольцевые люстры и светильники</a>
-                            <a href="#" class="categories-header__link">Реечные и рядные светильники
-                                и люстры</a>
-                            <a href="#" class="categories-header__link">Точечный свет</a>
-                        </div>
-                        <div class="categories-header__submenu" data-submenu="2">
-                            <div class="categories-header__submenu-close"></div>
-                            Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Ullam a odio
-                            similique, porro provident blanditiis sed nihil praesentium doloremque eum maiores quas,
-                            tenetur asperiores enim voluptatibus et! Nemo, atque. Ratione!
-                        </div>
                     </div>
                 </div>
             </div>
@@ -197,8 +171,28 @@
                                     </label>
                                 </div>
                             </div>
+                            <div class="product-info__color">
+                                <h3 class="product-info__size-title">Цвет</h3>
+                                <div class="product-info__size-value">
+                                    <input type="radio" name="color" id="color-gold" class="product__size-input">
+                                    <label for="color-gold" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Золото</span>
+                                    </label>
+
+                                    <input type="radio" name="color" id="color-silver" class="product__size-input">
+                                    <label for="color-silver" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Серебро</span>
+                                    </label>
+
+                                    <input type="radio" name="color" id="color-brass" class="product__size-input">
+                                    <label for="color-brass" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Латунь</span>
+                                    </label>
+
+                                </div>
+                            </div>
                             <div class="product-info__price">
-                                444 44444 ₽ <button class="product-info__tocart">В корзину</button>
+                                444 44444 ₽ <button class="product-info__tocart page-btn">В корзину</button>
                             </div>
                             <div class="product-info__dropdown dropdown-js ">
                                 <div class="product-info__dropdown-btn dropdown-js__control">Характеристики</div>
@@ -271,145 +265,115 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -421,7 +385,7 @@
                     <div class="slider-block">
                         <div class="slider-block__container">
                             <div class="slider-block__header">
-                                <h2 class="slider-block__title block__header">
+                                <h2 class="slider-block__title block__header nomb">
                                     Похожие товары
                                 </h2>
                                 <div class="slider-block__control">
@@ -437,145 +401,115 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -586,40 +520,69 @@
                     </div>
                     <section class="lighting">
                         <div class="lighting__container">
-                            <h2 class="lighting__header block__header">
-                                Наше освещение в интерьере
+                            <h2 class="lighting__header block__header nomb">
+                                Освещение со вкусом
                             </h2>
                             <div class="lighting__content">
                                 <div class="lighting__pic">
                                     <img src="img/lighting/lighting-1.jpg" alt="light">
-                                    <div class="lighting__pic-info">
-                                        <h3 class="lighting__pic-info-title">Gilian</h3>
-                                        <p class="lighting__pic-info-sub">88 888 ₽ </p>
-                                        <a href="#" class="lighting__pic-info-link">Подробнее</a>
+                                    <div class="lighting__tips tips-1">
+                                        <div class="lighting__pic-info">
+                                            <h3 class="lighting__pic-info-title">Gilian</h3>
+                                            <p class="lighting__pic-info-sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info-link">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="lighting__pic">
                                     <img src="img/lighting/lighting-2.jpg" alt="light">
-                                    <div class="lighting__pic-info">
-                                        <h3 class="lighting__pic-info-title">Gilian</h3>
-                                        <p class="lighting__pic-info-sub">88 888 ₽ </p>
-                                        <a href="#" class="lighting__pic-info-link">Подробнее</a>
+                                    <div class="lighting__tips tips-2">
+                                        <div class="lighting__pic-info">
+                                            <h3 class="lighting__pic-info-title">Gilian</h3>
+                                            <p class="lighting__pic-info-sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info-link">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="lighting__pic">
                                     <img src="img/lighting/lighting-3.jpg" alt="light">
-                                    <div class="lighting__pic-info">
-                                        <h3 class="lighting__pic-info__title">Gilian</h3>
-                                        <p class="lighting__pic-info__sub">88 888 ₽ </p>
-                                        <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                    <div class="lighting__tips tips-3">
+                                        <div class="lighting__pic-info">
+                                            <h3 class="lighting__pic-info__title">Gilian</h3>
+                                            <p class="lighting__pic-info__sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="lighting__tips tips-4">
+                                        <div class="lighting__pic-info fortips-4">
+                                            <h3 class="lighting__pic-info__title">Gilian</h3>
+                                            <p class="lighting__pic-info__sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="lighting__tips tips-5">
+                                        <div class="lighting__pic-info fortips-5">
+                                            <h3 class="lighting__pic-info__title">Gilian</h3>
+                                            <p class="lighting__pic-info__sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="lighting__tips tips-6">
+                                        <div class="lighting__pic-info fortips-6">
+                                            <h3 class="lighting__pic-info__title">Gilian</h3>
+                                            <p class="lighting__pic-info__sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="lighting__pic">
                                     <img src="img/lighting/lighting-4.jpg" alt="light">
-                                    <div class="lighting__pic-info">
-                                        <h3 class="lighting__pic-info__title">Gilian</h3>
-                                        <p class="lighting__pic-info__sub">88 888 ₽ </p>
-                                        <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                    <div class="lighting__tips tips-7">
+                                        <div class="lighting__pic-info fortips-7">
+                                            <h3 class="lighting__pic-info__title">Gilian</h3>
+                                            <p class="lighting__pic-info__sub">88 888 ₽ </p>
+                                            <a href="#" class="lighting__pic-info__link">Подробнее</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -647,145 +610,115 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <div class="swiper card-thumb-swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
-                                                            class="card__image">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-pagination card-thumb-pag"></div>
+                                            <div class="card-badge-sale">Sale</div>
+                                            <div class="card-badge-new">new</div>
+                                            <div class="card__image-wrapper">
+                                                <img src="img/bestsellers/bestseller-1.jpg" alt="pic"
+                                                    class="card__image">
+                                                <img src="img/bestsellers/bestseller-2.jpg" alt="pic"
+                                                    class="card__image">
                                             </div>
                                             <div class="card__text">
                                                 <h3 class="card__name">
-                                                    Semi sandblasted Crysta
+                                                    Semi
                                                 </h3>
-                                                <div class="card__price">
-                                                    88 000 ₽
+                                                <div class="card__price card__price-sale">
+                                                    <span class="card__price-old">88 000 ₽</span>
+                                                    <p class="card__price-new">61 600 ₽
+                                                        <span class="card__price-percent">-30%</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
