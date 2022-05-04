@@ -75,8 +75,12 @@
                         </div>
                     </form>
                     <a href="comparison.html" class="header__compare icon-compare header-icon"></a>
-                    <a href="favorite.html" class="header__favorite icon-favorite header-icon"></a>
-                    <a href="checkout.html" class="header__cart icon-cart header-icon"></a>
+                    <a href="favorite.html" class="header__favorite icon-favorite header-icon">
+                        <span class="fovorite-value"></span>
+                    </a>
+                    <a href="checkout.html" class="header__cart icon-cart header-icon">
+                        <span class="cart-value"></span>
+                    </a>
                 </div>
                 <button class="burger">
                     <span class="burger__line"></span>
@@ -165,6 +169,26 @@
                                     <label for="sizeL" class="product__size-label">
                                         <span class="custom-checkbox"></span> <span class="size">L</span>
                                     </label>
+                                </div>
+                            </div>
+                            <div class="product-info__color">
+                                <h3 class="product-info__size-title">Цвет</h3>
+                                <div class="product-info__size-value">
+                                    <input type="radio" name="color" id="color-gold" class="product__size-input">
+                                    <label for="color-gold" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Золото</span>
+                                    </label>
+
+                                    <input type="radio" name="color" id="color-silver" class="product__size-input">
+                                    <label for="color-silver" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Серебро</span>
+                                    </label>
+
+                                    <input type="radio" name="color" id="color-brass" class="product__size-input">
+                                    <label for="color-brass" class="product__size-label">
+                                        <span class="custom-checkbox"></span> <span class="size">Латунь</span>
+                                    </label>
+
                                 </div>
                             </div>
                             <div class="product-info__price">
@@ -361,7 +385,7 @@
                     <div class="slider-block">
                         <div class="slider-block__container">
                             <div class="slider-block__header">
-                                <h2 class="slider-block__title block__header">
+                                <h2 class="slider-block__title block__header nomb">
                                     Похожие товары
                                 </h2>
                                 <div class="slider-block__control">
@@ -496,7 +520,7 @@
                     </div>
                     <section class="lighting">
                         <div class="lighting__container">
-                            <h2 class="lighting__header block__header">
+                            <h2 class="lighting__header block__header nomb">
                                 Освещение со вкусом
                             </h2>
                             <div class="lighting__content">

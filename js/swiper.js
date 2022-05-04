@@ -3,10 +3,13 @@ const swiper = new Swiper('.mainpage-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    autoHeight: true,
+    spaceBetween: 10,
 
     // If we need pagination
     pagination: {
         el: '.mainpage-pagination',
+        clickable: true,
     },
 
     // Navigation arrows

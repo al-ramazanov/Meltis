@@ -205,7 +205,7 @@ function openBlocks() {
             <div class="slider-block">
     <div class="slider-block__container">
         <div class="slider-block__header">
-            <h2 class="slider-block__title block__header">
+            <h2 class="slider-block__title block__header nomb">
             С этим часто покупают
             </h2>
             <div class="slider-block__control">
@@ -711,13 +711,24 @@ document.addEventListener('click', (e) => {
     }
     if (target.classList.contains('plus-js')) {
         counter.innerText = ++counter.innerText;
-
-    }
-    if (target.classList.contains('cart-card__remove')) {
-        const cartItem = target.closest('.cart-card')
-        let item = document.querySelector('.similar-min')
-        item.remove()
-        cartItem.remove()
     }
 
 })
+
+function getPageName() {
+    const pageName = location.pathname.split('/').slice(-1);
+    let cards = document.querySelectorAll('.card')
+
+
+    if (pageName == 'new.html') {
+        cards.forEach((card) => {
+            card.classList.add('card-new')
+        })
+    }
+    if (pageName == 'promotions.html') {
+        cards.forEach((card) => {
+            card.classList.add('card-sale')
+        })
+    }
+}
+getPageName()
