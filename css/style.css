@@ -2692,10 +2692,12 @@ text-align: center;
 
 .product-info__compare {
   font-size: 22px;
+  cursor: pointer;
 }
 
 .product-info__favorite {
   font-size: 22px;
+  cursor: pointer;
 }
 
 .product-info__size {
