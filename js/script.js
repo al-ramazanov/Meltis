@@ -134,8 +134,6 @@ function accordion() {
 
             self.classList.toggle('open')
 
-            console.log(dropDownBtn);
-            console.log(dropDownBody);
             if (self.classList.contains('open')) {
                 dropDownBtn.classList.add('open');
                 dropDownBody.classList.add('open')
@@ -698,22 +696,44 @@ document.addEventListener('click', (e) => {
             accordionBody.style.marginBottom = null;
         }
     }
+
     let counter;
     if (target.classList.contains('minus-js') || target.classList.contains('plus-js')) {
         const counterWrapper = target.closest('.counter-js')
         counter = counterWrapper.querySelector('.value-js');
     }
-
     if (target.classList.contains('minus-js')) {
         if (parseInt(counter.innerText) > 1) {
-            counter.innerText = --counter.innerText
+            counter.innerText = --counter.innerText;
+            calc()
         }
+
     }
     if (target.classList.contains('plus-js')) {
         counter.innerText = ++counter.innerText;
+        calc()
+    }
+})
+
+function calc() {
+    const cartItems = document.querySelectorAll('.cart-card')
+    if (cartItems) {
+        let totalPrice = 0;
+        cartItems.forEach((item) => {
+            let amout = item.querySelector('.value-js')
+            let price = item.querySelector('.cart-card__price')
+            const curentPrice = parseInt(amout.innerText) * parseInt(price.innerText)
+            totalPrice += curentPrice
+            console.log(totalPrice);
+        })
+        let total = document.querySelector('.checkout-total__price');
+        total.innerText = totalPrice + ' ₽';
+        let curentPcs = document.querySelector('.checkout-total__sub')
+        let curentPcsVal = curentPcs.querySelector('span')
+        curentPcsVal.innerText = `${cartItems.length}`
     }
 
-})
+}
 
 function getPageName() {
     const pageName = location.pathname.split('/').slice(-1);
@@ -732,3 +752,18 @@ function getPageName() {
     }
 }
 getPageName()
+
+function galery() {
+    let thumbs = document.querySelectorAll('.galery-popup__thumbs-pic')
+    const big = document.querySelector('.galery-popup__focus-pic');
+    let bigImg = big.querySelector('img')
+    thumbs.forEach((item) => {
+        let thumbImg = item.querySelector('img')
+        item.addEventListener('click', () => {
+            let bigImgSrc = bigImg.getAttribute('src')
+            bigImg.src = thumbImg.src;
+            thumbImg.src = bigImgSrc;
+        })
+    })
+}
+galery()
